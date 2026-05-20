@@ -61,7 +61,9 @@ class AdminCeritaController extends Controller
             if ($cerita->file_laporan) {
                 Storage::disk('public')->delete($cerita->file_laporan);
             }
-            $cerita->file_laporan = $request->file('file_laporan')->store('laporan', 'public');
+            $original = $request->file('file_laporan')->getClientOriginalName();
+            $safeName = time() . '_' . preg_replace('/[^A-Za-z0-9._-]/', '_', $original);
+            $cerita->file_laporan = $request->file('file_laporan')->storeAs('laporan', $safeName, 'public');
         }
 
         $cerita->update([

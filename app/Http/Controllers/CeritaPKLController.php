@@ -26,7 +26,9 @@ class CeritaPKLController extends Controller
 
         $filePath = null;
         if ($request->hasFile('file_laporan')) {
-            $filePath = $request->file('file_laporan')->store('laporan', 'public');
+            $original = $request->file('file_laporan')->getClientOriginalName();
+            $safeName = time() . '_' . preg_replace('/[^A-Za-z0-9._-]/', '_', $original);
+            $filePath = $request->file('file_laporan')->storeAs('laporan', $safeName, 'public');
         }
 
         PengalamanPKL::create([

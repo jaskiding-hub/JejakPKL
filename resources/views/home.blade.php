@@ -270,12 +270,12 @@
                     @if($item->file_laporan)
                     <div class="mt-4 flex items-center justify-between p-3 bg-gray-50 rounded-xl">
                         <div class="flex items-center gap-2">
-                            <span class="text-red-500">📄</span>
+                            <span class="text-xs font-medium text-gray-700">Laporan:</span>
                             <span class="text-xs font-medium text-gray-700">{{ basename($item->file_laporan) }}</span>
                         </div>
                         <a href="{{ Storage::url($item->file_laporan) }}"
                            class="text-xs text-blue-600 font-semibold hover:underline" download>
-                            ⬇ Download
+                            Download
                         </a>
                     </div>
                     @endif
@@ -312,10 +312,10 @@ function loadTopMitra(page) {
                     </div>
                     <div class="p-5">
                         <h3 class="font-bold text-gray-900 mb-2" style="font-size:1.35rem;">${m.nama_industri}</h3>
-                        <p class="text-gray-400 text-sm mb-2">📍 ${m.lokasi}</p>
-                        <p class="text-gray-500 text-sm mb-4">👥 ${m.jumlah_siswa_pkl}+ Siswa PKL Tahun Ini</p>
+                        <p class="text-gray-400 text-sm mb-2">${m.lokasi}</p>
+                        <p class="text-gray-500 text-sm mb-4">${m.jumlah_siswa_pkl}+ Siswa PKL Tahun Ini</p>
                         <a href="/industri/${m.id_industri}" class="flex items-center justify-center gap-2 w-full text-sm font-semibold py-2.5 rounded-xl border" style="border-color:#D1D5DB;color:#374151;">
-                            Lihat Detail →
+                            Lihat Detail
                         </a>
                     </div>
                 </div>`;
@@ -362,7 +362,7 @@ function loadSemuaMitra(page) {
                     <p class="text-xs text-gray-400 flex items-center gap-1 mb-4"> ${m.lokasi}</p>
                     <div class="flex items-center justify-between pt-3 border-t border-gray-100">
                         <span class="text-xs text-gray-400">${m.jumlah_siswa_pkl} Kuota Tersisa</span>
-                        <a href="/industri/${m.id_industri}" class="text-sm font-semibold flex items-center gap-1" style="color:#2563EB;">Lihat Detail →</a>
+                        <a href="/industri/${m.id_industri}" class="text-sm font-semibold flex items-center gap-1" style="color:#2563EB;">Lihat Detail</a>
                     </div>
                 </div>`;
             });
