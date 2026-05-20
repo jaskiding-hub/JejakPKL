@@ -359,7 +359,7 @@ function loadSemuaMitra(page) {
                         <span class="text-xs font-semibold px-2.5 py-1 rounded-lg" style="background:#DBEAFE;color:#1D4ED8;">${m.kategori}</span>
                     </div>
                     <h3 class="font-bold text-gray-900 mb-1" style="font-size:1rem;">${m.nama_industri}</h3>
-                    <p class="text-xs text-gray-400 flex items-center gap-1 mb-4">📍 ${m.lokasi}</p>
+                    <p class="text-xs text-gray-400 flex items-center gap-1 mb-4"> ${m.lokasi}</p>
                     <div class="flex items-center justify-between pt-3 border-t border-gray-100">
                         <span class="text-xs text-gray-400">${m.jumlah_siswa_pkl} Kuota Tersisa</span>
                         <a href="/industri/${m.id_industri}" class="text-sm font-semibold flex items-center gap-1" style="color:#2563EB;">Lihat Detail →</a>
