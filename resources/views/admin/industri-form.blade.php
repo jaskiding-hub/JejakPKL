@@ -6,7 +6,17 @@
 <div style="background-color: #F3F4F6; min-height: calc(100vh - 68px); padding: 40px 0;">
     <div class="max-w-2xl mx-auto px-4">
 
+        <div class="mb-6">
+            <a href="{{ route('admin.industri') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Kembali ke Kelola Industri
+            </a>
+        </div>
+
         <div class="bg-white rounded-2xl p-8 shadow-sm">
+            <h1 class="text-2xl font-bold text-gray-900 mb-6">{{ isset($mitra) ? 'Edit Industri' : 'Tambah Industri' }}</h1>
 
             @if($errors->any())
                 <div class="mb-4 p-3 rounded-xl text-sm" style="background:#FEE2E2; color:#B91C1C;">
