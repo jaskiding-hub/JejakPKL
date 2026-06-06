@@ -60,6 +60,8 @@ class AdminIndustriController extends Controller
             'email_perusahaan' => $request->email_perusahaan,
             'lokasi' => $request->alamat,
             'alamat' => $request->alamat,
+            'latitude' => $request->latitude ?: null,
+            'longitude' => $request->longitude ?: null,
             'jumlah_siswa_pkl' => $request->jumlah_siswa_pkl,
             'gambar' => $gambar,
         ]);
@@ -91,6 +93,8 @@ class AdminIndustriController extends Controller
             'kontak' => $request->kontak,
             'instagram' => $request->instagram,
             'email_perusahaan' => $request->email_perusahaan,
+            'latitude' => $request->latitude ?: null,
+            'longitude' => $request->longitude ?: null,
             'jumlah_siswa_pkl' => $request->jumlah_siswa_pkl,
             'gambar' => $gambar,
         ]);

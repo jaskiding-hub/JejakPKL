@@ -18,9 +18,14 @@ Route::get('/register', [RegisterController::class, 'showRegister'])->name('regi
 Route::post('/register', [RegisterController::class, 'register'])->name('register.post');
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+// Root selalu redirect ke login (walaupun sudah pernah login)
+Route::get('/', function () {
+    return redirect()->route('login');
+});
+
 // Rute untuk halaman utama dan fitur pengguna yang sudah login
 Route::middleware('auth.any')->group(function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/industri/{id}', [IndustriController::class, 'detail'])->name('industri.detail');
     Route::get('/cerita-pkl/bagikan', [CeritaPKLController::class, 'create'])->name('cerita-pkl.create');
     Route::post('/cerita-pkl/bagikan', [CeritaPKLController::class, 'store'])->name('cerita-pkl.store');

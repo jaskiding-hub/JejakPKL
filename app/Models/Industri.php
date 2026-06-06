@@ -18,6 +18,8 @@ class Industri extends Model
         'instagram',
         'email_perusahaan',
         'alamat',
+        'latitude',
+        'longitude',
         'jumlah_siswa_pkl'
     ];
 

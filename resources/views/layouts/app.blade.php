@@ -68,7 +68,7 @@
 <body class="bg-white text-gray-800">
 
     {{-- ==================== NAVBAR ==================== --}}
-    <nav class="bg-white sticky top-0 z-50" style="border-bottom: 1px solid #E5E7EB;">
+    <nav class="bg-white sticky top-0" style="border-bottom: 1px solid #E5E7EB; z-index: 1000; position: sticky;">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-center" style="height: 68px;">
 
@@ -186,7 +186,7 @@
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" class="flex-shrink-0">
                                 <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                             </svg>
-                            <span style="font-size:0.85rem; color: #94A3B8;">info@jejakpkl.id</span>
+                            <span style="font-size:0.85rem; color: #94A3B8;">jejakpkl@gmail.com</span>
                         </li>
                     </ul>
                 </div>

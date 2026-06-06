@@ -12,8 +12,11 @@
             <p class="text-gray-500 text-sm mt-1">Pusat kontrol berbagi pengalaman dan laporan PKL di JejakPKL.</p>
         </div>
         <a href="{{ route('cerita-pkl.create') }}"
-           class="flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:opacity-90 transition"
-           style="background-color: #2563EB;">
+           class="flex items-center gap-2 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-all duration-150 shadow-md hover:shadow-lg hover:translate-y-0.5 active:translate-y-1"
+           style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+            </svg>
             Bagikan Pengalaman
         </a>
     </div>

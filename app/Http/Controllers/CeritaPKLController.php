@@ -40,6 +40,6 @@ class CeritaPKLController extends Controller
             'file_laporan'  => $filePath,
         ]);
 
-        return redirect()->route('home')->with('success', 'Pengalaman PKL berhasil dibagikan!');
+        return redirect(route('home') . '#cerita-pkl')->with('success', 'Pengalaman PKL berhasil dibagikan!');
     }
 }

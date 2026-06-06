@@ -10,16 +10,6 @@ class LoginController extends Controller
 {
     public function showLogin()
     {
-        // Jika user biasa sudah login
-        if (Auth::guard('web')->check()) {
-            return redirect()->route('home');
-        }
-
-        // Jika admin sudah login
-        if (Auth::guard('admin')->check()) {
-            return redirect()->route('admin.industri');
-        }
-
         return view('auth.login');
     }
 

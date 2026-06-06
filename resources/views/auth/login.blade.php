@@ -108,8 +108,8 @@
 
                     {{-- Tombol Masuk --}}
                     <button type="submit"
-                        class="w-full text-white font-semibold py-3 rounded-xl transition-all duration-150 hover:opacity-90"
-                        style="background-color: #1D4ED8; font-size: 0.95rem;">
+                        class="w-full text-white font-semibold py-3 rounded-xl transition-all duration-150 shadow-md hover:shadow-lg hover:translate-y-0 active:translate-y-1"
+                        style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); font-size: 0.95rem;">
                         Masuk
                     </button>
 

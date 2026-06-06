@@ -31,11 +31,23 @@
                 @csrf
 
                 {{-- Nama Lengkap --}}
+                @php
+                    $currentName = Auth::user()?->name ?? Auth::guard('admin')->user()?->name ?? '';
+                    $isAdmin = Auth::guard('admin')->check();
+                @endphp
                 <div class="mb-4">
                     <label class="block text-sm font-semibold text-gray-700 mb-1.5">Nama Lengkap</label>
-                    <input type="text" name="nama_siswa" value="{{ old('nama_siswa') }}"
-                           placeholder="Contoh: Budi Santoso"
-                           class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    @if($isAdmin)
+                        {{-- Admin bisa isi nama siswa secara manual --}}
+                        <input type="text" name="nama_siswa" value="{{ old('nama_siswa') }}"
+                               placeholder="Nama siswa yang bersangkutan"
+                               class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    @else
+                        <input type="text" name="nama_siswa" value="{{ $currentName }}" disabled readonly
+                               class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm"
+                               style="background-color: #F3F4F6; color: #9CA3AF; cursor: not-allowed;">
+                        <input type="hidden" name="nama_siswa" value="{{ $currentName }}">
+                    @endif
                 </div>
 
                 {{-- Tahun + Jurusan --}}
@@ -103,9 +115,14 @@
 
                 {{-- Submit --}}
                 <button type="submit"
-                    class="w-full text-white font-semibold py-3 rounded-xl hover:opacity-90 transition"
-                    style="background-color: #1D4ED8; font-size: 1rem;">
-                    Save
+                    class="w-full text-white font-semibold py-3 rounded-xl transition-all duration-150 shadow-md hover:shadow-lg hover:translate-y-0 active:translate-y-1 flex items-center justify-center gap-2"
+                    style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); font-size: 1rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                        <polyline points="17 21 17 13 7 13 7 21"/>
+                        <polyline points="7 3 7 8 15 8"/>
+                    </svg>
+                    Simpan Cerita
                 </button>
             </form>
 

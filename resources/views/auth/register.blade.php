@@ -109,8 +109,8 @@
 
                     {{-- Tombol Daftar --}}
                     <button type="submit"
-                        class="w-full text-white font-semibold py-3 rounded-xl transition-all duration-150 hover:opacity-90 flex items-center justify-center gap-2"
-                        style="background-color: #1D4ED8; font-size: 0.95rem;">
+                        class="w-full text-white font-semibold py-3 rounded-xl transition-all duration-150 shadow-md hover:shadow-lg hover:translate-y-0 active:translate-y-1 flex items-center justify-center gap-2"
+                        style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); font-size: 0.95rem;">
                         Daftar Sekarang
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.5">
